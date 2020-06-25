@@ -30,46 +30,45 @@
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
     ?>
-    <h1>ATN cơ sở dữ liệu</h1>
-    <button onclick="location.href='index.php'">Trờ về trang chủ</button>
+    <h1>ATN's Database</h1>
+    <button onclick="location.href='index.php'">Back to Homepage</button>
     <div class="container">
         <div class="grid-view">
             <div class="grid-item">
                 <img src="./database.png"/>
-                <a href="#" onClick="displayData()"><b>Xem dữ liệu hóa đơn</b></a>
+                <a href="#" onClick="displayData()"><b>View Invoice Database</b></a>
             </div>
             <div class="grid-item">
                 <img src="./database.png" />
-                <a href="./InsertData.php" target="framename"><b>Thêm DL</b></a>
+                <a href="./InsertData.php" target="framename"><b>Add database</b></a>
             </div>
             <div class="grid-item">
                 <img src="./database.png"/>
-                <a href="./DeleteData.php" target="framename"><b>Xóa DL</b></a>
+                <a href="./DeleteData.php" target="framename"><b>Delete database</b></a>
             </div>
             <div class="grid-item">
                 <img src="./database.png"/>
-                <a href="UpdateData.php" target="framename"><b>Cập nhật DL</b></a>
+                <a href="UpdateData.php" target="framename"><b>Update Database</b></a>
             </div>
             <div id ="displaychange" class="grid-item">
                 <table class="table table-bordered table-condensed">
                     <thead>
                     <tr>
-                        <th>Product_ID</th>
-                        <th>Product_name</th>
-                        <th>NSX</th>
+                        <th>products_id</th>
+                        <th>name</th>
+                        <th>price</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    // tạo vòng lặp 
-                        //while($r = mysql_fetch_array($result)){
+                   
                             foreach ($resultSet as $row) {
                     ?>
                     
                     <tr>
-                        <td scope="row"><?php echo $row['product_id'] ?></td>
-                        <td><?php echo $row['product_name'] ?></td>
-                        <td><?php echo $row['nsx'] ?></td>     
+                        <td scope="row"><?php echo $row['products_id'] ?></td>
+                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['price'] ?></td>     
                     </tr>
                     
                     <?php

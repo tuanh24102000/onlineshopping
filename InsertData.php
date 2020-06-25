@@ -10,13 +10,13 @@ list-style: none;
 </style>
 </head>
 <body>
-<h1>Thêm DL vào table product</h1>
+<h1>Add data in product table</h1>
     <ul>
         <form name="InsertData" action="InsertData.php" method="POST" >
-            <li>Pruduct id:</li><li><input type="text" name="product_id" /></li>
-            <li>Product_name:</li><li><input type="text" name="product_name" /></li>
-            <li>NSX:</li><li><input type="date" name="nsx" /></li>
-            <li><input type="submit" value="Thêm DL" /></li>
+            <li>products_id:</li><li><input type="text" name="products_id" /></li>
+            <li>name:</li><li><input type="text" name="name" /></li>
+            <li>price:</li><li><input type="text" name="price" /></li>
+            <li><input type="submit" value="Add" /></li>
         </form>
     </ul>
 
@@ -49,7 +49,7 @@ if($pdo === false){
 //$stmt->bindParam(':class', 'GCD018');
 //$stmt->execute();
 //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
-$sql = "INSERT INTO product(product_id, product_name, nsx) VALUES ('$_POST[product_id]','$_POST[product_name]', '$_POST[nsx]')";
+$sql = "INSERT INTO products(products_id, name, price) VALUES ('$_POST[products_id]','$_POST[name]', '$_POST[price]')";
 $stmt = $pdo->prepare($sql);
 
     if($stmt->execute() == TRUE){

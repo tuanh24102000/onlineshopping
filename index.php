@@ -53,7 +53,8 @@
         </div>
     </div>
     <div class="footer">
-        <h2>K52/12 Ong Ich Duong</h2>
+        <h2>Address: K52/12 Ong Ich Duong</h2>
+        <h3>Phone Number: 0898570361</h3>
         <p>Creater: Nguyen Vu Tu</p>
     </div>
 </body>

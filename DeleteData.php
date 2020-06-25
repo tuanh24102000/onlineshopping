@@ -2,13 +2,13 @@
 <html>
 <body>
 
-<h1>Xóa DL</h1>
+<h1>Delete Data</h1>
 
-<h4>ID SP cần xóa</h4>
+<h4>ID of Product</h4>
 
 <form name="delete" method="POST" action="DeleteData.php">
-    <lable for="id">ID Sản Phẩm</label><input type="text" name="id" placeholder="nhập id sp cần xóa"/><br>
-    <input type="submit" value="Xóa">
+    <lable for="id">ID Product</label><input type="text" name="id" placeholder="..."/><br>
+    <input type="submit" value="Delete">
 </form>
 
 <?php
@@ -35,7 +35,7 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM product WHERE product_id = '$_POST[id]'";
+$sql = "DELETE FROM products WHERE products_id = '$_POST[id]'";
 $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "deleted successfully.";
