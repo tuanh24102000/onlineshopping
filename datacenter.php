@@ -24,7 +24,7 @@
         ));
         }  
 
-        $sql = "SELECT * FROM product ORDER BY product_id";
+        $sql = "SELECT * FROM products ORDER BY products_id";
         $stmt = $pdo->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
